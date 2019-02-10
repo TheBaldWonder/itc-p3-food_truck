@@ -1,38 +1,20 @@
 <?php
 //items4.php
 
-$myItem = new Item(1,"Taco","Our Tacos are awesome!",4.95);
-$myItem->addExtra("Sour Cream");
-$myItem->addExtra("Cheese");
-$myItem->addExtra("Guacamole");
+$myItem = new Item(1,"Taco","Ground beef, lettuce, and shredded cheese in a crisp corn shell!",3.50);
 $config->items[] = $myItem;
 
-$myItem = new Item(2,"Sundae","Our Sundaes are awesome!",3.95);
-$myItem->addExtra("Sprinkles");
-$myItem->addExtra("Chocolate Sauce");
-$myItem->addExtra("Nuts");
+$myItem = new Item(2,"Burrito","Loaded with cheese, rice, beans and shredded beef!",6.25);
 $config->items[] = $myItem;
 
-$myItem = new Item(3,"Salad","Our Salads are awesome!",5.95);
-$myItem->addExtra("Croutons");
-$myItem->addExtra("Bacon");
-$myItem->addExtra("Lemon Wedges");
-$myItem->addExtra("Avacado");
+$myItem = new Item(3,"Quesadilla","Full of cheese, spices and grilled onions and peppers!",8.95);
 $config->items[] = $myItem;
 
+$myItem = new Item(3,"Enchilada","Shredded chicken and cheese smothered in our house-made sauce!",5.95);
+$config->items[] = $myItem;
 
-//create a counter to load the ids...
-//$items[] = new Item(1,"Taco","Our Tacos are awesome!",4.95);
-//$items[] = new Item(2,"Sundae","Our Sundaes are awesome!",3.95);
-//$items[] = new Item(3,"Salad","Our Salads are awesome!",5.95);
-
-/*
-echo '<pre>';
-var_dump($items);
-echo '</pre>';
-die;
-*/
-
+$myItem = new Item(3,"Nachos","Crispy chips, melty cheese and fresh toppings can't be beat!",7.50);
+$config->items[] = $myItem;
 
 class Item
 {
@@ -40,8 +22,7 @@ class Item
     public $Name = '';
     public $Description = '';
     public $Price = 0;
-    public $Extras = array();
-    
+        
     public function __construct($ID,$Name,$Description,$Price)
     {
         $this->ID = $ID;
@@ -50,12 +31,6 @@ class Item
         $this->Price = $Price;
         
     }#end Item constructor
-    
-    public function addExtra($extra)
-    {
-        $this->Extras[] = $extra;
-        
-    }#end addExtra()
 
 }#end Item class
 
