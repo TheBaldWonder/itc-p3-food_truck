@@ -67,9 +67,7 @@ function showForm()
 			if(empty(thisForm.YourName,"Please Enter Your Name")){return false;}
 			return true;//if all is passed, submit!
 		}
-	</script>
-	<h3 align="center">' . smartTitle() . '</h3>
-	<p align="center">Please enter your name</p> 
+	</script> 
 	<form action="' . THIS_PAGE . '" method="post" onsubmit="return checkForm(this);">
              ';
   
@@ -85,7 +83,7 @@ function showForm()
  
           echo '
 				<p>
-					<input type="submit" value="Please Enter Your Name"><em>(<font color="red"><b>*</b> required field</font>)</em>
+					<input type="submit" value="Get Order Total">
 				</p>
 		<input type="hidden" name="act" value="display" />
 	</form>

@@ -31,17 +31,11 @@ echo "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?".">\n"; //xml uses ?, so we
 	<tr>
 		<td colspan="3">
 	  		 <h1 align="center"><?php echo $config->banner;?></h1>
-	  		 <p>This theme means you didn't choose one!  (default)
 		</td>
   	</tr>
 	<tr>
 	      <!-- change left panel color here -->
-      	<td width="175" valign="top">
-			<p align="center"><? echo $config->sidebar1; ?></p>
-			<?php
-				echo makeLinks($config->nav1,'<p align="center">','</p>'); #link arrays are created in config_inc.php file
-			?>
-		</td>
+      	
             <!-- change guts/identity area color here -->
 		<td valign="top">
 		<?=showFeedback();?>
