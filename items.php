@@ -10,10 +10,10 @@ $config->items[] = $myItem;
 $myItem = new Item(3,"Quesadilla","Full of cheese, spices and grilled onions and peppers!",8.95);
 $config->items[] = $myItem;
 
-$myItem = new Item(3,"Enchilada","Shredded chicken and cheese smothered in our house-made sauce!",5.95);
+$myItem = new Item(4,"Enchilada","Shredded chicken and cheese smothered in our house-made sauce!",5.95);
 $config->items[] = $myItem;
 
-$myItem = new Item(3,"Nachos","Crispy chips, melty cheese and fresh toppings can't be beat!",7.50);
+$myItem = new Item(5,"Nachos","Crispy chips, melty cheese and fresh toppings can't be beat!",7.50);
 $config->items[] = $myItem;
 
 class Item
