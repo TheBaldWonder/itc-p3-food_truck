@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700,800,800i');
+* {
+    padding:0;
+    margin:0;
+}
+
+body {
+padding: 100px;
+background-image: url(tacotruck.jpg);
+background-repeat: no-repeat;
+background-position: right;
+background-attachment: fixed;
+height: 100%;
+}
+
+h1 {
+    padding-top: 0;
+    color: green;
+}
+
+footer {
+    padding-top: 900px;
+}
