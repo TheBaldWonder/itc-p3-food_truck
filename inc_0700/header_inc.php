@@ -24,8 +24,10 @@ echo "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?".">\n"; //xml uses ?, so we
 	<style type="text/css">
 	 .somethingcouldgohere {}
 	</style>
+	<link rel="stylesheet" href="inc_0700/style.css" />
 </head>
 <body>
+	
 <table width="100%" cellpadding="5" cellspacing="0" margin="0">
       <!-- change header color here -->
 	<tr>
@@ -40,3 +42,4 @@ echo "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?".">\n"; //xml uses ?, so we
 		<td valign="top">
 		<?=showFeedback();?>
 		<!-- end of header include file -->
+	 

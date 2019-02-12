@@ -23,7 +23,7 @@
 	</tr>
       <!-- change footer color here -->
 	<tr>
-		<td colspan="3">
+		<td class="footer" colspan="3">
 		    <p align="center"><b>Tijuana Tacos</b></p>
 			<p align="center">All Rights Reserved:</p>
 	        <p align="center"><em>&copy; 2007 - <?php echo date("Y");?></em></p>
