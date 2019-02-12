@@ -133,7 +133,7 @@ function showData()
             //echo "$itemcost";
         }
         
-        echo "subtotal is $subtotal";
+        //echo "subtotal is $subtotal";
         /*else{//display error message and forms
              echo '<p>Please enter a whole number!</p>';
             break;
