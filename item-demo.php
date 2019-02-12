@@ -47,15 +47,15 @@ if(isset($_REQUEST['act'])){$myAction = (trim($_REQUEST['act']));}else{$myAction
 
 switch ($myAction) 
 {//check 'act' for type of process
-	case "display": # 2)Display user's name!
+	case "display": # 2)Display user's order total!
 	 	showData();
 	 	break;
-	default: # 1)Ask user to enter their name 
+	default: # 1)Ask user to place order 
 	 	showForm();
 }
 
 function showForm()
-{# shows form so user can enter their name.  Initial scenario
+{# shows form so user can order from the food truck.
 	global $config;
     get_header(); #defaults to header_inc.php	
 	
@@ -71,14 +71,16 @@ function showForm()
 	<form action="' . THIS_PAGE . '" method="post" onsubmit="return checkForm(this);">
              ';
   
-    
 		foreach($config->items as $item)
           {
             //echo "<p>ID:$item->ID  Name:$item->Name</p>"; 
             //echo '<p>Taco <input type="text" name="item_1" /></p>';
               
-              echo '<p>' . $item->Name . ' <input type="text" name="item_' . $item->ID . '" /></p>';
-              
+              echo '<p><strong>' . $item->Name . '</strong></p>';
+            
+                echo '<p>' . $item->Description . '</p>';
+            
+                echo '<p>Order Amount <input type="text" name="item_' . $item->ID . '" /></p>';
           }       
  
           echo '
@@ -92,26 +94,26 @@ function showForm()
 }
 
 function showData()
-{#form submits here we show entered name
-	
-    //dumpDie($_POST);
+{#form submits here we show itmes ordered
+
      get_header(); #defaults to footer_inc.php
 	
-	
 	echo '<h3 align="center">' . smartTitle() . '</h3>';
-	
-	foreach($_POST as $name => $value)
+    
+ 	foreach($_POST as $name => $value)
     {//loop the form elements
         
         //if form name attribute starts with 'item_', process it
         if(substr($name,0,5)=='item_')
         {
+           
             //explode the string into an array on the "_"
             $name_array = explode('_',$name);
 
             //id is the second element of the array
 			//forcibly cast to an int in the process
             $id = (int)$name_array[1];
+                    
 
 			/*
 				Here is where you'll do most of your work
@@ -128,35 +130,19 @@ function showData()
 			
 			*/
             echo "<p>You ordered $value of item number $id</p>";
-            
+            //echo "$itemcost";
         }
         
-        
-
+        echo "subtotal is $subtotal";
+        /*else{//display error message and forms
+             echo '<p>Please enter a whole number!</p>';
+            break;
+        }*/
     }
-	
-	
-	
+    
 	
 	echo '<p align="center"><a href="' . THIS_PAGE . '">RESET</a></p>';
 	get_footer(); #defaults to footer_inc.php
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
