@@ -113,24 +113,17 @@ function showData()
             //id is the second element of the array
 			//forcibly cast to an int in the process
             $id = (int)$name_array[1];
-                    
-
-			/*
-				Here is where you'll do most of your work
-				Use $id to loop your array of items and return 
-				item data such as price.
-				
-				Consider creating a function to return a specific item 
-				from your items array, for example:
-				
-				$thisItem = getItem($id);
-				
-				Use $value to determine the number of items ordered 
-				and create subtotals, etc.
+            
+            
+            $thisItem = getItem($id);
+            //dumpDie($thisItem);
 			
-			*/
-            echo "<p>You ordered $value of item number $id</p>";
-            //echo "$itemcost";
+            //echo "<p>You ordered $value of item number $id</p>";
+            
+            if($value!=""){
+            $subtotal=$value*$thisItem->Price;
+            echo "<p>You ordered $value $thisItem->Name(s) which costs $subtotal</p>";
+            }
         }
         
         //echo "subtotal is $subtotal";
@@ -144,5 +137,27 @@ function showData()
 	echo '<p align="center"><a href="' . THIS_PAGE . '">RESET</a></p>';
 	get_footer(); #defaults to footer_inc.php
 }
+
+/*
+public $ID = 0;
+    public $Name = '';
+    public $Description = '';
+    public $Price = 0;
+    */
+
+function getItem($id) {
+    global $config;
+    
+    foreach($config->items as $item){
+        if($item->ID==$id){
+           return $item; 
+        }
+    }
+    
+    
+    
+    
+}
+
 ?>
 
