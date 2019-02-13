@@ -121,16 +121,11 @@ function showData()
             //echo "<p>You ordered $value of item number $id</p>";
             
             if($value!=""){
-            $subtotal=$value*$thisItem->Price;
-            echo "<p>You ordered $value $thisItem->Name(s) which costs $subtotal</p>";
+            (float)$subtotal=$value*$thisItem->Price;
+            echo "<p>You ordered $value $thisItem->Name(s) which costs $" . number_format($subtotal, 2) . "</p>";
             }
         }
         
-        //echo "subtotal is $subtotal";
-        /*else{//display error message and forms
-             echo '<p>Please enter a whole number!</p>';
-            break;
-        }*/
     }
     
 	
@@ -138,12 +133,6 @@ function showData()
 	get_footer(); #defaults to footer_inc.php
 }
 
-/*
-public $ID = 0;
-    public $Name = '';
-    public $Description = '';
-    public $Price = 0;
-    */
 
 function getItem($id) {
     global $config;
@@ -153,11 +142,9 @@ function getItem($id) {
            return $item; 
         }
     }
-    
-    
-    
-    
+       
 }
+
 
 ?>
 
