@@ -77,6 +77,8 @@ function showForm()
             //echo '<p>Taco <input type="text" name="item_1" /></p>';
               
               echo '<p><strong>' . $item->Name . '</strong></p>';
+              echo '<p><strong>$ ' . number_format($item->Price, 2) . '</strong></p>';
+            
             
                 echo '<p>' . $item->Description . '</p>';
             
@@ -123,6 +125,7 @@ function showData()
             if($value!=""){
             (float)$subtotal=$value*$thisItem->Price;
             echo "<p>You ordered $value $thisItem->Name(s) which costs $" . number_format($subtotal, 2) . "</p>";
+            
             }
         }
         
