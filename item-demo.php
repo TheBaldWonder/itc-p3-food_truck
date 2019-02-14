@@ -66,8 +66,10 @@ function showData() #form submits here we show itmes ordered
 	
     echo '<h3 align="center">' . smartTitle() . '</h3>';
     
+    $order_subtotal = 0;
  	foreach($_POST as $name => $value)//loop the form elements 
     {      
+        
         if(substr($name,0,5)=='item_') //if form name attribute starts with 'item_', process it
         {   //explode the string into an array on the "_"
             $name_array = explode('_',$name);
@@ -79,11 +81,23 @@ function showData() #form submits here we show itmes ordered
 			
             if($value!=""){
                 (float)$subtotal=$value*$thisItem->Price;
+                
+                $order_subtotal += $subtotal;
+                
                 echo "<p>You ordered $value $thisItem->Name(s) which costs $" . number_format($subtotal, 2) . "</p>";
+                
             } //end nested if($value!="")
+            
         } // end if(substr($name,0,5)=='item_')   
     } //end foreach
-
+    
+    $tax = $order_subtotal * .12;
+    $total = $order_subtotal + $tax;
+    
+    echo '<p>Your order subtotal is: $' . number_format($order_subtotal,2) . '</p>';
+    echo '<p>Your order tax is: $' . number_format($tax,2) . '</p>';
+    echo '<p>Your order total is: $' . number_format($total,2) . '</p>';
+    
     echo '<p align="center"><a href="' . THIS_PAGE . '">RESET</a></p>';
 	get_footer(); #defaults to footer_inc.php
 } //end showData
