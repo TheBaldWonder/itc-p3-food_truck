@@ -12,7 +12,7 @@
  */
 
 //place credentials here:
-define('DB_NAME','itc250_wn19');
-define('DB_USER','eb_w19_admin');
-define('DB_PASSWORD','Othello5%');
-define('DB_HOST','mysql.ellycodes.com'); 
+define('DB_NAME','database');
+define('DB_USER','username');
+define('DB_PASSWORD','password');
+define('DB_HOST','localhost'); 
