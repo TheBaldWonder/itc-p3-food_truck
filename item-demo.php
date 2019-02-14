@@ -42,6 +42,8 @@ function showForm() # shows form so user can order from the food truck.
     foreach($config->items as $item)
     {       
         echo '<p><strong>' . $item->Name . '</strong></p>';
+        
+        echo '<p style="padding-left: 15px";><strong>$ ' . number_format($item->Price, 2) . '</strong></p>';
             
         echo '<p>' . $item->Description . '</p>';
             
