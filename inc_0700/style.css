@@ -1,5 +1,25 @@
+/*
+
+// ********************************************************* //
+// *                                                       * //
+// * style.css                                             * //
+// *                                                       * //
+// * Tijuana Taco Truck Landing Page                       * //
+// *                                                       * //
+// * @package Taco Truck                                   * //
+// * @author Group 3 <emorri08@seattlecentral.edu>         * //
+// * @version 1.3 2019/02/12                               * //
+// * @link http://ellycodes.com/                           * //
+// * @license https://www.apache.org/licenses/LICENSE-2.0  * //
+// *                                                       * //
+// ********************************************************* //
+
+*/
+
+
+
 /*import google fonts*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:200|Righteous');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200|Righteous|Life+Savers:700');
 
 
 * {
@@ -19,16 +39,20 @@ body {
 }
 
 td h1 {
-    font-size: 40px;
+    font-size: 38px;
     font-family: 'Righteous', sans-serif;
     padding-top: 0;
     letter-spacing: 15px;
     color: orangered;
 }
 
+h1 {
+    margin-top:10px;
+}
+
 form p {
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 200;
     color: #222;
 }
@@ -45,7 +69,7 @@ input {
 
 input[type="submit"] {
     font-family: 'Righteous', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     padding: 10px 50px;
     background: orangered;
     border: 2px outset #a2a2a2;
@@ -54,9 +78,9 @@ input[type="submit"] {
     margin: 30px 50px;
 }
 
-p strong {
+.name strong {
     font-family: 'Poppins', sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     color: mediumseagreen;
 }
 
@@ -73,3 +97,70 @@ td.footer {
 td.footer p {
     padding-right: 250px !important;
 }
+
+.price strong {
+    padding-left: 15px;
+    font-family: 'Life Savers', cursive;
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+}
+
+.price {
+    padding-top: 10px;
+}
+
+.name {
+    padding-top: 10px;
+}
+
+.description {
+    margin: 7px 0;
+}
+
+/******************* landing page styles *******************/
+
+#pageContent {
+    margin: auto;
+/*    padding-left: 175px;*/
+}
+
+#welcomeTxt {
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+    letter-spacing: 10px;
+    color: mediumseagreen;
+    text-align: center;
+    padding: 10px;
+    margin-top: 35px;
+}
+
+#menuLink {
+    color: #fff;
+    font-family: 'Righteous', sans-serif;
+    font-size: 46px;
+    border: 8px outset gray;
+    border-radius: 15px;
+    padding: 5px 25px 10px;
+    background: mediumseagreen;
+    position: absolute;
+    bottom: 400px;
+    left: 300px;
+}
+
+p.bodyTxt {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #333;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+td[valign="top"] {
+    width: 0;
+}
+
+/******************* end landing page styles *******************/
