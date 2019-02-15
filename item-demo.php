@@ -1,10 +1,17 @@
 <?php
-// * item-demo.php
-// * @package Taco Truck
-// * @author Group 3 <emorri08@seattlecentral.edu>
-// * @version 1.3 2019/02/12
-// * @link http://ellycodes.com/
-// * @license https://www.apache.org/licenses/LICENSE-2.0
+// ********************************************************* //
+// *                                                       * //
+// * item_demo.php                                         * //
+// *                                                       * //
+// * Tijuana Taco Truck Landing Page                       * //
+// *                                                       * //
+// * @package Taco Truck                                   * //
+// * @author Group 3 <emorri08@seattlecentral.edu>         * //
+// * @version 1.3 2019/02/12                               * //
+// * @link http://ellycodes.com/                           * //
+// * @license https://www.apache.org/licenses/LICENSE-2.0  * //
+// *                                                       * //
+// ********************************************************* //
 
 require 'inc_0700/config_inc.php';
 include 'items.php'; 
