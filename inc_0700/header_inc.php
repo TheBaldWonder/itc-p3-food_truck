@@ -20,7 +20,6 @@ echo "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?".">\n"; //xml uses ?, so we
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<?php include INCLUDE_PATH . 'meta_inc.php'; ?>
-	<link href="<?php echo VIRTUAL_PATH; ?>include/default_style.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
 	 .somethingcouldgohere {}
 	</style>
