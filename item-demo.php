@@ -64,7 +64,7 @@ function showData() #form submits here we show itmes ordered
 { 
     get_header(); #defaults to footer_inc.php
 	
-    echo '<h3 align="center">' . smartTitle() . '</h3>';
+    echo '<h3 align="center">Your Order</h3>';
     
     $order_subtotal = 0;
  	foreach($_POST as $name => $value)//loop the form elements 
