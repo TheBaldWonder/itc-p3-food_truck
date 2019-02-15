@@ -12,6 +12,7 @@ include 'items.php';
 # Read the value of 'action' whether it is passed via $_POST or $_GET with $_REQUEST
 if(isset($_REQUEST['act'])){$myAction = (trim($_REQUEST['act']));}else{$myAction = "";}
 
+
 switch ($myAction) //check 'act' for type of process
 { 
     case "display": # 2)Display user's order total!
@@ -66,6 +67,13 @@ function showData() #form submits here we show itmes ordered
 	
     echo '<h3 align="center">Your Order</h3>';
     
+   /* if(!onlyEmail($_POST['Email']))
+	{//data must be alphanumeric or punctuation only	
+		feedback("Data entered for email is not valid");
+		myRedirect(THIS_PAGE);
+	}*/
+
+    
     $order_subtotal = 0;
  	foreach($_POST as $name => $value)//loop the form elements 
     {      
@@ -79,6 +87,11 @@ function showData() #form submits here we show itmes ordered
             
             $thisItem = getItem($id);
 			
+            if(!is_int($value))  //<<<<<<-------ISSUES
+	{//data must be numeric 
+		feedback("Please Enter a whole number");
+		myRedirect(THIS_PAGE);}
+            
             if($value!=""){
                 (float)$subtotal=$value*$thisItem->Price;
                 
