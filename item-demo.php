@@ -80,7 +80,14 @@ function showData() #form submits here we show itmes ordered
             $id = (int)$name_array[1];
             
             $thisItem = getItem($id);
-			
+		
+		
+		 if(!is_int($value))  //<<<<<<-------ISSUES
+	{//data must be numeric 
+		feedback("Please Enter a whole number");
+		myRedirect(THIS_PAGE);}
+		
+		
             if($value!=""){
                 (float)$subtotal=$value*$thisItem->Price;
                 
