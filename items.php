@@ -1,5 +1,19 @@
 <?php
-//items4.php
+// ********************************************************* //
+// *                                                       * //
+// * items.php                                             * //
+// *                                                       * //
+// * Tijuana Taco Truck Landing Page                       * //
+// *                                                       * //
+// * @package Taco Truck                                   * //
+// * @author Group 3 <emorri08@seattlecentral.edu>         * //
+// * @version 1.3 2019/02/12                               * //
+// * @link http://ellycodes.com/                           * //
+// * @license https://www.apache.org/licenses/LICENSE-2.0  * //
+// *                                                       * //
+// ********************************************************* //
+
+
 //create items for sale in taco truck
 $myItem = new Item(1,"Taco","Ground beef, lettuce, and shredded cheese in a crisp corn shell!",3.50);
 $config->items[] = $myItem;
