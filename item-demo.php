@@ -51,7 +51,7 @@ function showForm() # shows form so user can order from the food truck.
             
         echo '<p>' . $item->Description . '</p>';
             
-        echo '<p>Order Amount <input type="text" name="item_' . $item->ID . '" /></p>';
+        echo '<p>Order Amount <input type="number" min="0" name="item_' . $item->ID . '" /></p>';
     } //end foreach($config->items as $item)      
     
         echo '
@@ -82,10 +82,11 @@ function showData() #form submits here we show itmes ordered
             $thisItem = getItem($id);
 		
 		
-		 if(!is_int($value))  //<<<<<<-------ISSUES
+		 /*if(!is_int($value))  //<<<<<<-------ISSUES
 	{//data must be numeric 
 		feedback("Please Enter a whole number");
-		myRedirect(THIS_PAGE);}
+		myRedirect(THIS_PAGE);
+         }*/
 		
 		
             if($value!=""){
@@ -96,7 +97,7 @@ function showData() #form submits here we show itmes ordered
                 echo "<p>You ordered $value $thisItem->Name(s) which costs $" . number_format($subtotal, 2) . "</p>";
                 
             } //end nested if($value!="")
-            
+         
         } // end if(substr($name,0,5)=='item_')   
     } //end foreach
     
