@@ -45,11 +45,11 @@ function showForm() # shows form so user can order from the food truck.
   
     foreach($config->items as $item)
     {       
-        echo '<p><strong>' . $item->Name . '</strong></p>';
+        echo '<p class="name"><strong>' . $item->Name . '</strong></p>';
         
-        echo '<p style="padding-left: 15px";><strong>$ ' . number_format($item->Price, 2) . '</strong></p>';
+        echo '<p class="price" style="padding-left: 15px";><strong>$ ' . number_format($item->Price, 2) . '</strong></p>';
             
-        echo '<p>' . $item->Description . '</p>';
+        echo '<p class="description">' . $item->Description . '</p>';
             
         echo '<p>Order Amount <input type="number" min="0" name="item_' . $item->ID . '" /></p>';
     } //end foreach($config->items as $item)      
@@ -104,9 +104,9 @@ function showData() #form submits here we show itmes ordered
     $tax = $order_subtotal * .12;
     $total = $order_subtotal + $tax;
     
-    echo '<p>Your order subtotal is: $' . number_format($order_subtotal,2) . '</p>';
-    echo '<p>Your order tax is: $' . number_format($tax,2) . '</p>';
-    echo '<p>Your order total is: $' . number_format($total,2) . '</p>';
+    echo '<p class="subTot">Your order subtotal is: $' . number_format($order_subtotal,2) . '</p>';
+    echo '<p class="orderTax">Your order tax is: $' . number_format($tax,2) . '</p>';
+    echo '<p class="orderTot">Your order total is: $' . number_format($total,2) . '</p>';
     
     echo '<p align="center"><a href="' . THIS_PAGE . '">RESET</a></p>';
 	get_footer(); #defaults to footer_inc.php
