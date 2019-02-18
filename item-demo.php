@@ -54,7 +54,7 @@ function showForm() # shows form so user can order from the food truck.
             
         echo '<p class="description">' . $item->Description . '</p>';
             
-        echo '<p>Order Amount <input type="text" name="item_' . $item->ID . '" /></p>';
+        echo '<p>Order Amount <input type="number" min="0" name="item_' . $item->ID . '" /></p>';
     } //end foreach($config->items as $item)      
     
         echo '
@@ -71,7 +71,9 @@ function showData() #form submits here we show itmes ordered
 { 
     get_header(); #defaults to footer_inc.php
 	
-    echo '<h3 align="center">' . smartTitle() . '</h3>';
+    echo '<h3 align="center">Your Order</h3>';
+    
+    $order_subtotal = 0;
     
  	foreach($_POST as $name => $value)//loop the form elements 
     {      
@@ -86,10 +88,21 @@ function showData() #form submits here we show itmes ordered
 			
             if($value!=""){
                 (float)$subtotal=$value*$thisItem->Price;
+                
+                $order_subtotal += $subtotal;
+                
                 echo "<p class='description'>You ordered $value $thisItem->Name(s) which costs $" . number_format($subtotal, 2) . "</p>";
             } //end nested if($value!="")
         } // end if(substr($name,0,5)=='item_')   
     } //end foreach
+    
+      
+    $tax = $order_subtotal * .12;
+    $total = $order_subtotal + $tax;
+    
+    echo '<p class="description">Your order subtotal is: $' . number_format($order_subtotal,2) . '</p>';
+    echo '<p class="description">Your order tax is: $' . number_format($tax,2) . '</p>';
+    echo '<p class="description">Your order total is: $' . number_format($total,2) . '</p>';
 
     echo '<p class="reset" align="center"><a href="' . THIS_PAGE . '">RESET</a></p>';
 	get_footer(); #defaults to footer_inc.php
