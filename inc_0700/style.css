@@ -90,12 +90,9 @@ td.footer {
     font-weight: 200;
     color: #333 !important;
     position: absolute !important; 
-    top: 800px !important;
-    width: 100% !important;
-}
-
-td.footer p {
-    padding-right: 250px !important;
+    bottom: 10px !important;
+    left: 650px;
+    width: 400px !important;
 }
 
 .price strong {
