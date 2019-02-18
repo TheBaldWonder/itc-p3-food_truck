@@ -78,6 +78,23 @@ input[type="submit"] {
     margin: 30px 50px;
 }
 
+.reset {
+    font-family: 'Righteous', sans-serif;
+    font-size: 16px;
+    padding: 10px 50px;
+    background: orangered;
+    border: 2px outset #a2a2a2;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    top: 300px;
+    left: 175px;
+}
+
+.reset :visited {
+    color: white;
+}
+
 .name strong {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
@@ -93,6 +110,10 @@ td.footer {
     bottom: 10px !important;
     left: 650px;
     width: 400px !important;
+}
+
+footer.p {
+    font-size: 10px !important;
 }
 
 .price strong {
@@ -113,6 +134,10 @@ td.footer {
 
 .description {
     margin: 7px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    color: #222;
 }
 
 /******************* landing page styles *******************/
